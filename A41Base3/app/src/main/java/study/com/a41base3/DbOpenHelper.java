@@ -21,7 +21,7 @@ public class DbOpenHelper extends SQLiteOpenHelper {
             + DB_TABLE +
             " ( _id INTEGER PRIMARY KEY AUTOINCREMENT, " +
             COLUMN_NOTE
-            + " text not null);";
+            + " TEXT NOT NULL);";
 
     Context mContext;
 
