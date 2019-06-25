@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String[] FROM =
             {DbOpenHelper.COLUMN_NOTE,};
     private static final int[] TO = {R.id.notesList, };
+    private static final java.lang.String ORDER = "_id DESC";
     EditText mInputField;
     ListView mNotesList;
 
@@ -41,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         mDb = mHelper.getWritableDatabase();
-        Cursor c = mDb.
-
+        Cursor c = mDb.query(DbOpenHelper.DB_TABLE, FIELD,
+                null, null, null, null, ORDER);
+        mAdapter.swapCursor(c);
     }
 
     public void onOkButtonClick(View view) {
