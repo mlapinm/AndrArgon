@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
+    public static final String KEY_TEXT = "KEY_TEXT";
     TextView mTextView;
 
     @Override
@@ -16,7 +17,7 @@ public class SecondActivity extends AppCompatActivity {
         mTextView = findViewById(R.id.textView);
         Intent intent = getIntent();
         String string =
-                intent.getStringExtra("KEY_TEXT");
+                intent.getStringExtra(KEY_TEXT);
         if(string != null){
             mTextView.setText(string);
         }
