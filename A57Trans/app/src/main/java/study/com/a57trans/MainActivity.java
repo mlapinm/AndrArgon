@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+
 public class MainActivity extends AppCompatActivity {
 
     static final String ACTION_SEND_TEXT = "study.com.a57trans.intent.action.SEND_TEXT";
