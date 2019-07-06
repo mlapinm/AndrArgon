@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="study.com.b11notif">
+    package="study.com.b16browser">
 
     <application
         android:allowBackup="true"
@@ -9,17 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service
-            android:name=".MyCoolService"></service>
-        <activity android:name=".SecondaryActivity"></activity>
-
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".AirplaneReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
