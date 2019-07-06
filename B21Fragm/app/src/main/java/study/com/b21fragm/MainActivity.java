@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
             MyFragment fragment = MyFragment.getInstance("qqq  "
                 + hashCode());
             fragmentTransaction.add(R.id.frameLayout, fragment);
-
             fragmentTransaction.commit();
         }else{
             Log.d("happy"," " + frameLayout.getChildCount()
