@@ -23,4 +23,9 @@ public class DualPaneContaner extends LinearLayout implements PaneContaner {
         detailView.showItem(string);
     }
 
+    @Override
+    public boolean onBackPressed() {
+        return false;
+    }
+
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<study.com.b23list.DualPaneContaner
+    android:id="@+id/mainActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <study.com.b23list.ItemListView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
+    <include
+        layout="@layout/detail_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7" />
+
+</study.com.b23list.DualPaneContaner>
