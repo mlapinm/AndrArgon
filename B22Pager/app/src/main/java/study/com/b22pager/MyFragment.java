@@ -1,4 +1,4 @@
-package study.com.b21fragm;
+package study.com.b22pager;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -31,13 +31,6 @@ public class MyFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         Logger.logMe();
-    }
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Logger.logMe();
-        setRetainInstance(true);
     }
 
     @Nullable
